@@ -26,6 +26,7 @@ export class CadempresasComponent {
   }
 
   ngOnInit(): void {
+    this.ListEmpresas();
     throw new Error('Metodo não foi implementado, ta tudo certo?');
   }
 
@@ -38,6 +39,18 @@ export class CadempresasComponent {
         }
       }
     );
+  }
+
+  ListEmpresas(){
+
+    this.ServiceempresasService.ListEmpre().subscribe(
+      {
+        next: data => this.empresas = data,
+        error: () => console.log("erro ao chamar")
+      }
+    )
+
+
   }
 
 

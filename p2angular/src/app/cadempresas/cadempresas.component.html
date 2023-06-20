@@ -45,6 +45,15 @@
  </div>
   
     
+ <tbody>
+  <tr *ngFor="let empresa of empresas">
+      <th scope="row">{{empresa.id}}</th>
+      <td>{{empresa.nome_Empresa}}</td>
+      <td>{{empresa.cnpj}}</td>
+      <td>{{empresa.cep}}</td>
+      <td>{{empresa.email}}</td>
 
+    </tr>
+</tbody>
   
 

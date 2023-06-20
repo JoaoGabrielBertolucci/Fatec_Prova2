@@ -16,6 +16,11 @@ export class ServiceempresasService {
   cadastroEmpresa( empresa: empresa): Observable<empresa>{
     return this.http.post<empresa>(this.url, empresa);
   }
+
+  ListEmpre(): Observable<empresa[]>{
+    let url = "http://localhost:3000/empresas";
+    return this.http.get<empresa[]>(url);
+  }
   
 
 }
