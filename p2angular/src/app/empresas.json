@@ -1,0 +1,14 @@
+{
+
+    "empresas": [
+            {
+            
+                "id": 1,
+                "nome_Empresa": "exemples.Inc",
+                "cnpj": 7539518624,
+                "cep": 13304852,
+                "email": "exemples@terra.com"
+
+        }
+    ]
+}

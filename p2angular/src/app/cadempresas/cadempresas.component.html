@@ -1,29 +1,45 @@
 <h3 style="text-align: center;">Cadastro empresa</h3>
 
+<form [formGroup]="formGroupEmpresa">
+
 <div class="input-group mb-3">
     
-    <input type="text" class="form-control" placeholder="ID da empresa" aria-label="Example text with button addon" >
-    <input type="text" class="form-control" placeholder="nome da empresa" aria-label="Example text with button addon" >
-  </div>
-  
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="CNPJ da empresa" aria-label="Recipient's username" aria-describedby="button-addon2">
-  </div>
-  
+    
+    <input type="text" class="form-control" placeholder="ID da empresa" >
+    <input type="text" class="form-control" placeholder="nome da empresa" formControlName="nome_Empresa">
+   
+    </div>
+</form>
+
+<form [formGroup]="formGroupEmpresa">
   <div class="input-group mb-3">
     
-    <input type="text" class="form-control" placeholder="CEP da Empresa" aria-label="Example text with two button addons">
+    
+    <input type="text" class="form-control" placeholder="CNPJ da empresa" formControlName="cnpj">
+    <input type="text" class="form-control" placeholder="CEP da Empresa" formControlName="cep">
+   
+
+    </div>
+</form> 
+  <div class="input-group mb-3">
+    
+   
   </div>
   
+<form [formGroup]="formGroupEmpresa">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
+    
+    <input type="text" class="form-control" placeholder="Email da empresa" formControlName="email">
+    
 
-  </div><br>
+  </div>
+</form>
+  <br>
 
  <div class="btn-group" style=" margin-left: 46%;">
 
-    <div class="btn-group" style="text-align: center;" role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-success">cadastrar</button>
+    <div class="btn-group" style="text-align: center;" role="group">
+        <button type="submit" class="btn btn-success" (click)="cadEmpresaS()">cadastrar</button>
         <button type="button" class="btn btn-warning">listar</button>
       </div>
  </div>
